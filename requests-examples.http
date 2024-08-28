@@ -1,14 +1,14 @@
 # примеры API-запросов
 
-@baseUrl = http://localhost:8000/api/v1
+@baseUrl = http://localhost:5555/api/v1
 
 # создание продукта
 POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Морковь",
-  "description": "Лучшая морковь на рынке"
+  "title": "Чеснок",
+  "description": "Дешевые"
 }
 
 ###
@@ -20,7 +20,7 @@ Content-Type: application/json
 ###
 
 # обновление продукта
-PATCH {{baseUrl}}/products/3/
+PATCH {{baseUrl}}/products/2/
 Content-Type: application/json
 
 {
@@ -30,13 +30,13 @@ Content-Type: application/json
 ###
 
 # удаление продукта
-DELETE {{baseUrl}}/products/5/
+DELETE {{baseUrl}}/products/2/
 Content-Type: application/json
 
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=капуста
+GET {{baseUrl}}/products/?search=Огурцы
 Content-Type: application/json
 
 ###
